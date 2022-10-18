@@ -19,25 +19,9 @@ fun main () {
     list.print()
     println("List size ${list.size()}")
 
-    val listOfNumbers = listOf(1, 2, 3)
-    try {
-        println("Element in list: ${outOfBoundsList(3, listOfNumbers)}")
-    } catch (e1: ListIndexOutOfBoundsException) {
-        println(e1)
-    }
-
-    val age = -21
-    try {
-        println("Age: ${illegalAge(age)}")
-    } catch (e2: IllegalArgumentException) {
-        println(e2)
-    }
-
-    try {
-        println("Result: ${divideNumbers(3, 0)}")
-    } catch (e3: ArithmeticException) {
-        println(e3)
-    }
+    arrayIndexOutOfBoundsTry()
+    numberFormatExceptionTry()
+    arithmeticalExceptionTry()
 
     try {
         val ticket1 = Ticket(1249, -19.0)
