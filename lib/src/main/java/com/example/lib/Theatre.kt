@@ -1,23 +1,29 @@
 package com.example.lib
 
 class Theatre(private val name: String, private var address: String) :Sizable {
+
+    var listOfTickets: MutableList<Ticket> = mutableListOf()
+
     override fun toString(): String {
         return "Name: $name Address: $address"
     }
 
     companion object {
-        val listOfTickets: MutableList<Ticket> = mutableListOf()
 
-        private val ides = listOf<Int>(1122, 3341, 5690, 4444, 3020)
-        private val prices = listOf<Double>(5.99, 6.99, 4.50, 7.80, 5.75)
-        private val daysAhead = listOf<Int>(10, 20, 30, 40, 50)
+        fun generateTickets(n: Int): MutableList<Ticket> {
+            val ides = listOf<Int>(1122, 3341, 5690, 4444, 3020)
+            val prices = listOf<Double>(5.99, 6.99, 4.50, 7.80, 5.75)
+            val daysAhead = listOf<Int>(10, 20, 30, 40, 50)
 
-        fun generateTickets(n: Int) {
+            val list: MutableList<Ticket> = mutableListOf()
+
             for (i in 0 until n) {
                 val tickets = listOf<Ticket>(Ticket(ides.random(), prices.random()),
                     AdvanceTicket(ides.random(), prices.random(), daysAhead.random()))
-                listOfTickets.add(tickets.random())
+                list.add(tickets.random())
             }
+
+            return list
         }
     }
 

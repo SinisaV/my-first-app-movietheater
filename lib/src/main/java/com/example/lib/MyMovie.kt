@@ -15,25 +15,26 @@ fun main () {
 
     println("\n")
 
-    val list = Theatre("Maribox", "Maribor")
-    Theatre.generateTickets(30)
+    val theatre = Theatre("Maribox", "Maribor")
+    var list1:MutableList<Ticket> = Theatre.generateTickets(30)
+    theatre.listOfTickets = list1
 
-    list.print()
+    theatre.print()
 
-    println("\nFilter list if contain")
-    println(list.filteredListByString("30").toString())
+    println("\nFilter theatre if contain")
+    println(theatre.filteredListByString("30").toString())
 
-    println("\nFilter list not contain")
-    println(list.filteredListNotString("4444").toString())
+    println("\nFilter theatre not contain")
+    println(theatre.filteredListNotString("4444").toString())
 
-    println("\nList size ${list.size()}")
+    println("\ntheatre size ${theatre.size()}")
 
     println("\nCalculate total Price of tickets")
-    println(list.calculateTotalPrice().toString())
+    println(theatre.calculateTotalPrice().toString())
 
     println("\nFilter 10 elements that have price greater than 5")
-    println(list.returnFirst10ElementsWithPriceGreaterThan5().toString())
+    println(theatre.returnFirst10ElementsWithPriceGreaterThan5().toString())
 
     println("\nFilter number of elements that contains string")
-    println(list.returnNumberOfElementContainsString("1122"))
+    println(theatre.returnNumberOfElementContainsString("1122"))
 }
