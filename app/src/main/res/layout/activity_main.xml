@@ -2,17 +2,156 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inputLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/VerticalGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/textViewTicketTitle"
+        android:layout_width="253dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="ADVANCE TICKET INPUT FORM"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline" />
+
+    <EditText
+        android:id="@+id/editTextTicketId"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="e.g. 1111"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline" />
+
+    <TextView
+        android:id="@+id/textViewTicketId"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Id:"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTicketId"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
+
+    <EditText
+        android:id="@+id/editTextTicketPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="e.g. 5.9"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline" />
+
+    <TextView
+        android:id="@+id/textViewTicketPrice"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Price:"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTicketPrice"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
+
+    <EditText
+        android:id="@+id/editTextTicketDaysAhead"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="190dp"
+        android:ems="10"
+        android:hint="e.g. 5"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline" />
+
+    <TextView
+        android:id="@+id/textViewTicketDaysAhead"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Days Ahead:"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTicketDaysAhead"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Exit"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
+
+    <Button
+        android:id="@+id/buttonAddTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Add"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
+
+    <Button
+        android:id="@+id/buttonInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Info"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
+
+    <ImageView
+        android:id="@+id/imageBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toTopOf="@+id/HorizontalGuideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/moviebackground" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuidelineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
