@@ -42,6 +42,7 @@
         android:ems="10"
         android:hint="e.g. 1111"
         android:inputType="number"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/barrierTextView"
         app:layout_constraintTop_toBottomOf="@+id/textViewTicketTitle" />
 
@@ -123,17 +124,17 @@
         android:backgroundTint="#3F51B5"
         android:text="Add"
         app:cornerRadius="30dp"
-        app:layout_constraintStart_toEndOf="@+id/buttonInfo"
+        app:layout_constraintStart_toEndOf="@+id/buttonScanQRCode"
         app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
 
     <Button
-        android:id="@+id/buttonInfo"
+        android:id="@+id/buttonScanQRCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#3F51B5"
-        android:text="Info"
+        android:text="QRCODE"
         app:cornerRadius="30dp"
         app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
         app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
