@@ -10,11 +10,12 @@
         android:id="@+id/textViewAboutCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
-        android:text="About Application"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:layout_marginStart="@dimen/marginStartCaptionAbout"
+        android:layout_marginTop="@dimen/marginTopCaptionAbout"
+        android:text="@string/aboutApplicationCaption"
+        android:textSize="@dimen/fontSizeCaptionAbout"
+        android:fontFamily="@font/rubikbold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -22,16 +23,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.14" />
 
     <TextView
         android:id="@+id/textViewNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Name:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:text="@string/textViewName"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        android:fontFamily="@font/rubikbold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewName"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
@@ -39,10 +40,10 @@
         android:id="@+id/textViewDescriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Description:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:text="@string/textViewDescription"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        android:fontFamily="@font/rubikbold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewDescription"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
@@ -50,10 +51,10 @@
         android:id="@+id/textViewVersionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Version:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:text="@string/textViewVersion"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        android:fontFamily="@font/rubikbold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewVersion"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
@@ -61,10 +62,10 @@
         android:id="@+id/textViewAuthorLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Author:"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:text="@string/textViewAuthor"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        android:fontFamily="@font/rubikbold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewAuthor"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
@@ -72,10 +73,10 @@
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="70dp"
-        android:text="MovieTeather"
-        android:textSize="16sp"
+        android:layout_marginStart="@dimen/marginStartTextViewDesAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewAbout"
+        android:text="@string/textViewNameDescription"
+        android:textSize="@dimen/fontSizeTextViewAbout"
         app:layout_constraintStart_toEndOf="@+id/barrierTextView"
         app:layout_constraintTop_toBottomOf="@+id/textViewAboutCaption" />
 
@@ -83,10 +84,10 @@
         android:id="@+id/textViewDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:text="Application is about \nMovie Theatre which \ncontains list of tickets"
-        android:textSize="16sp"
+        android:layout_marginStart="@dimen/marginStartTextViewDesAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewDesAbout"
+        android:text="@string/textViewDescriptionDescription"
+        android:textSize="@dimen/fontSizeTextViewAbout"
         app:layout_constraintStart_toEndOf="@+id/barrierTextView"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
@@ -94,10 +95,10 @@
         android:id="@+id/textViewVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:text="Task 4"
-        android:textSize="16sp"
+        android:layout_marginStart="@dimen/marginStartTextViewDesAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewDesAbout"
+        android:text="@string/textViewVersionDescription"
+        android:textSize="@dimen/fontSizeTextViewAbout"
         app:layout_constraintStart_toEndOf="@+id/barrierTextView"
         app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
 
@@ -105,10 +106,10 @@
         android:id="@+id/textViewAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:text="Siniša Vučetić"
-        android:textSize="16sp"
+        android:layout_marginStart="@dimen/marginStartTextViewDesAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewDesAbout"
+        android:text="@string/textViewAuthorDescription"
+        android:textSize="@dimen/fontSizeTextViewAbout"
         app:layout_constraintStart_toEndOf="@+id/barrierTextView"
         app:layout_constraintTop_toBottomOf="@+id/textViewVersion" />
 
@@ -120,5 +121,25 @@
         app:constraint_referenced_ids="textViewAuthorLabel,textViewVersionLabel,textViewDescriptionLabel,textViewNameLabel"
         tools:layout_editor_absoluteX="127dp"
         tools:layout_editor_absoluteY="438dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/widthAndHeightImageInfoAbout"
+        android:layout_height="@dimen/widthAndHeightImageInfoAbout"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:layout_marginTop="@dimen/marginTopCaptionAbout"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/information" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/widthImageVTAbout"
+        android:layout_height="@dimen/heightImageVTAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewAbout"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAboutCaption"
+        app:srcCompat="@drawable/videotape" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

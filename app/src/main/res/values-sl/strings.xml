@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieTeather</string>
+    <string name="listOfAdvanceTicketsCaption">Seznam vstopnic v predprodaji</string>
+    <string name="list">seznam</string>
+    <string name="buttonInput">Vnos</string>
+    <string name="buttonAbout">O aplikaciji</string>
+    <string name="advanceTicketCaption">OBRAZEC ZA VNOS VSTOPNIC V PREDPRODAJI</string>
+    <string name="hintId">npr. 1111</string>
+    <string name="hintPrice">npr. 5.9</string>
+    <string name="hintDaysAhead">npr. 5</string>
+    <string name="textViewId">Id:</string>
+    <string name="textViewPrice">Cena:</string>
+    <string name="textViewDaysAhead">Dnevi vnaprej:</string>
+    <string name="buttonQrCode">OR koda</string>
+    <string name="buttonAdd">Dodaj</string>
+    <string name="buttonExit">Zapri</string>
+    <string name="aboutApplicationCaption">Aplikacije</string>
+    <string name="textViewName">Ime:</string>
+    <string name="textViewDescription">Opis:</string>
+    <string name="textViewVersion">Verzija:</string>
+    <string name="textViewAuthor">Avtor:</string>
+    <string name="textViewNameDescription">MovieTeather</string>
+    <string name="textViewDescriptionDescription">Aplikacija je o kinu, ki vsebuje \nseznam vstopnic</string>
+    <string name="textViewVersionDescription">Naloga 4</string>
+    <string name="textViewAuthorDescription">Siniša Vučetić</string>
+    <string name="toastCountError">NAPAKA velikost niza</string>
+    <string name="toastNumbersError">Id, cena ali dneviVnaprej vsebuje samo številke!</string>
+    <string name="toastDecimalNumbersError">Id in dneviVnaprej ne smeta imeti decimalnih števil!</string>
+    <string name="toastInputError">Še enkrat preveri vnose!!!</string>
+</resources>

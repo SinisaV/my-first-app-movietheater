@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">MovieTeather</string>
+    <string name="listOfAdvanceTicketsCaption">List Of Advance Tickets</string>
+    <string name="list">list</string>
+    <string name="buttonInput">Input</string>
+    <string name="buttonAbout">About</string>
+    <string name="advanceTicketCaption">ADVANCE TICKET INPUT FORM</string>
+    <string name="hintId">e.g. 1111</string>
+    <string name="hintPrice">e.g. 5.9</string>
+    <string name="hintDaysAhead">e.g. 5</string>
+    <string name="textViewId">Id:</string>
+    <string name="textViewPrice">Price:</string>
+    <string name="textViewDaysAhead">Days Ahead:</string>
+    <string name="buttonQrCode">QR Code</string>
+    <string name="buttonAdd">Add</string>
+    <string name="buttonExit">Exit</string>
+    <string name="aboutApplicationCaption">Application</string>
+    <string name="textViewName">Name:</string>
+    <string name="textViewDescription">Description:</string>
+    <string name="textViewVersion">Version:</string>
+    <string name="textViewAuthor">Author:</string>
+    <string name="textViewNameDescription">MovieTeather</string>
+    <string name="textViewDescriptionDescription">Application is about Movie \nTheatre which contains \nlist of tickets</string>
+    <string name="textViewVersionDescription">Task 4</string>
+    <string name="textViewAuthorDescription">Siniša Vučetić</string>
+    <string name="toastCountError">ERROR COUNT String</string>
+    <string name="toastNumbersError">Id, price or daysAhead contains only numbers!</string>
+    <string name="toastDecimalNumbersError">Id and DaysAhead can not have decimal numbers!</string>
+    <string name="toastInputError">Check inputs again!!!</string>
 </resources>

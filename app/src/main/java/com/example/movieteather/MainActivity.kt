@@ -1,19 +1,18 @@
 package com.example.movieteather
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
-import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.lib.AdvanceTicket
 import com.example.movieteather.databinding.ActivityMainBinding
-import io.github.g00fy2.quickie.ScanQRCode
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     var listOfAdvanceTickets = mutableListOf<AdvanceTicket>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,72 +21,33 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val scanQrCodeLauncher = registerForActivityResult(ScanQRCode()) { result ->
+        fun onActivityResult(result:ActivityResult) {
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
 
-            val getResultString: String = result.toString().substringAfter("Value=").substringBefore(")")
-            //Toast.makeText(applicationContext, getResultString, Toast.LENGTH_SHORT).show()
-            val splitResult = " "
-            val resultList = getResultString.split(splitResult)
-            val regex = "-?[0-9]+(\\.[0-9]+)?".toRegex()
+                val id: Int = data!!.getIntExtra("id", 1111)
+                val price: Double = data.getDoubleExtra("price", 0.0)
+                val daysAhead: Int = data.getIntExtra("daysAhead", 0)
 
-            for (i in resultList) {
-                if (resultList.count() != 3) {
-                    Toast.makeText(applicationContext, "ERROR COUNT", Toast.LENGTH_SHORT).show()
-                }
-                else if (!resultList[0].matches(regex) || !resultList[1].matches(regex) || !resultList[2].matches(regex)) {
-                    Toast.makeText(applicationContext, "ID, price or daysAhead contains only numbers!", Toast.LENGTH_SHORT).show()
-                }
-                else if (resultList[0].contains(".") || resultList[2].contains(".")) {
-                    Toast.makeText(applicationContext, "ID and DaysAhead cant have decimal numbers!", Toast.LENGTH_SHORT).show()
-                }
-                else {
-                    binding.editTextTicketId.setText(resultList[0])
-                    binding.editTextTicketPrice.setText(resultList[1])
-                    binding.editTextTicketDaysAhead.setText(resultList[2])
-                }
+                listOfAdvanceTickets.add(
+                    AdvanceTicket(id, price, daysAhead)
+                )
+                binding.textViewResult.text = (listOfAdvanceTickets.toString())
             }
         }
 
-        binding.buttonAddTicket.setOnClickListener() {
-
-            if (binding.editTextTicketId.text.isBlank() || binding.editTextTicketPrice.text.isBlank()
-                || binding.editTextTicketDaysAhead.text.isBlank()) {
-
-                val myToast = Toast.makeText(applicationContext, "Enter again!!!", Toast.LENGTH_SHORT)
-                myToast.setGravity(Gravity.CENTER, 0, 0)
-                myToast.show()
-            }
-            else {
-                val id: Int = binding.editTextTicketId.text.toString().toInt()
-                val price: Double = binding.editTextTicketPrice.text.toString().toDouble()
-                val daysAhead: Int = binding.editTextTicketDaysAhead.text.toString().toInt()
-
-                listOfAdvanceTickets.add(AdvanceTicket(id, price, daysAhead))
-
-                binding.editTextTicketId.text.clear()
-                binding.editTextTicketPrice.text.clear()
-                binding.editTextTicketDaysAhead.text.clear()
-
-                val data = Intent()
-
-                data.putExtra("id", id)
-                data.putExtra("price",price)
-                data.putExtra("daysAhead", daysAhead)
-
-                setResult(RESULT_OK, data)
-                finish()
-            }
+        val getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            onActivityResult(result)
         }
 
-        /*binding.buttonInfo.setOnClickListener() {
-            Log.i("List size: ", listOfAdvanceTickets.size.toString())
-        }*/
-
-        binding.buttonScanQRCode.setOnClickListener {
-            scanQrCodeLauncher.launch(null)
+        binding.buttonInputDataActivity.setOnClickListener() {
+            val intent = Intent(this, InputDataActivity::class.java)
+            getContent.launch(intent)
         }
-        binding.buttonExit.setOnClickListener() {
-            exitProcess(0)
+
+        binding.buttonAboutActivity.setOnClickListener() {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
         }
     }
 }

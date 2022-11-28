@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieTeather</string>
+    <string name="listOfAdvanceTicketsCaption">Liste der Vorverkaufskarten</string>
+    <string name="list">aufführen</string>
+    <string name="buttonInput">Eingang</string>
+    <string name="buttonAbout">Um</string>
+    <string name="advanceTicketCaption">TICKET-EINGABEFORMULAR IM VORAUS</string>
+    <string name="hintId">z.B. 1111</string>
+    <string name="hintPrice">z.B. 5.9</string>
+    <string name="hintDaysAhead">z.B 5</string>
+    <string name="textViewId">Ausweis:</string>
+    <string name="textViewDaysAhead">Tage im Voraus:</string>
+    <string name="textViewPrice">Preis:</string>
+    <string name="buttonQrCode">QR Code</string>
+    <string name="buttonAdd">Hinzufügen</string>
+    <string name="buttonExit">Ausgang</string>
+    <string name="aboutApplicationCaption">Bewerbung</string>
+    <string name="textViewName">Name:</string>
+    <string name="textViewDescription">Beschreibung:</string>
+    <string name="textViewVersion">Ausführung:</string>
+    <string name="textViewAuthor">Autor:</string>
+    <string name="textViewNameDescription">MovieTeather</string>
+    <string name="textViewDescriptionDescription">Die Anwendung bezieht \nsich auf das Kino, das \neine Liste der \nEintrittskarten enthält</string>
+    <string name="textViewVersionDescription">Aufgabe 4</string>
+    <string name="textViewAuthorDescription">Siniša Vučetić</string>
+    <string name="toastCountError">ERROR COUNT Zeichenfolge</string>
+    <string name="toastNumbersError">Id, Preis oder TageImVoraus enthalten nur Zahlen!</string>
+    <string name="toastDecimalNumbersError">Id und TageImVoraus dürfen keine Dezimalzahlen haben!</string>
+    <string name="toastInputError">Eingaben nochmals prüfen!!!</string>
+</resources>

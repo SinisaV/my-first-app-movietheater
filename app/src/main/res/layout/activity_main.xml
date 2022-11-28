@@ -2,166 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/inputLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/VerticalGuideline"
+    <Button
+        android:id="@+id/buttonInputDataActivity"
+        style="@style/myButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06" />
+        android:layout_marginTop="@dimen/marginTopButtonMain"
+        android:text="@string/buttonInput"
+        android:textSize="@dimen/fontSizeButtons"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAboutActivity"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/buttonAboutActivity"
+        style="@style/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopButtonMain"
+        android:layout_marginEnd="@dimen/marginEndButtonMain"
+        android:text="@string/buttonAbout"
+        android:textSize="@dimen/fontSizeButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTextViewMain"
+        android:text="@string/list"
+        android:textSize="@dimen/fontSizeMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCaption" />
+
+    <TextView
+        android:id="@+id/textViewCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTextViewMain"
+        android:text="@string/listOfAdvanceTicketsCaption"
+        android:textSize="@dimen/fontSizeMain"
+        android:fontFamily="@font/rubikbold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/HorizontalGuideline"
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
-
-    <TextView
-        android:id="@+id/textViewTicketTitle"
-        android:layout_width="253dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="ADVANCE TICKET INPUT FORM"
-        android:textStyle="bold"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
-        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline" />
-
-    <EditText
-        android:id="@+id/editTextTicketId"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="e.g. 1111"
-        android:inputType="number"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/barrierTextView"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTicketTitle" />
-
-    <TextView
-        android:id="@+id/textViewTicketId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Id:"
-        android:textSize="20sp"
-        app:autoSizeTextType="none"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTicketId"
-        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
-
-    <EditText
-        android:id="@+id/editTextTicketPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="e.g. 5.9"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toEndOf="@+id/barrierTextView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTicketId" />
-
-    <TextView
-        android:id="@+id/textViewTicketPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Price:"
-        android:textSize="20sp"
-        app:autoSizeTextType="none"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTicketPrice"
-        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
-
-    <EditText
-        android:id="@+id/editTextTicketDaysAhead"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="e.g. 5"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/barrierTextView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTicketPrice" />
-
-    <TextView
-        android:id="@+id/textViewTicketDaysAhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Days Ahead:"
-        android:textSize="20sp"
-        app:autoSizeTextType="none"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTicketDaysAhead"
-        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline" />
-
-    <Button
-        android:id="@+id/buttonExit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#3F51B5"
-        android:text="Exit"
-        app:cornerRadius="30dp"
-        app:layout_constraintStart_toEndOf="@+id/buttonAddTicket"
-        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
-
-    <Button
-        android:id="@+id/buttonAddTicket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#3F51B5"
-        android:text="Add"
-        app:cornerRadius="30dp"
-        app:layout_constraintStart_toEndOf="@+id/buttonScanQRCode"
-        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
-
-    <Button
-        android:id="@+id/buttonScanQRCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#3F51B5"
-        android:text="QRCODE"
-        app:cornerRadius="30dp"
-        app:layout_constraintStart_toStartOf="@+id/VerticalGuideline"
-        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineButton" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <ImageView
-        android:id="@+id/imageBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitEnd"
-        app:layout_constraintBottom_toTopOf="@+id/HorizontalGuideline"
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/widthAndHeightImageMIconMain"
+        android:layout_height="@dimen/widthAndHeightImageMIconMain"
+        android:layout_marginStart="@dimen/marginStartImageMain"
+        android:layout_marginTop="@dimen/marginTopImageMain"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/moviebackground" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontalGuidelineButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="textViewTicketId,textViewTicketPrice,textViewTicketDaysAhead"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/movieicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
