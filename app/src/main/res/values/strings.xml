@@ -4,6 +4,7 @@
     <string name="list">list</string>
     <string name="buttonInput">Input</string>
     <string name="buttonAbout">About</string>
+    <string name="buttonSettings">Settings</string>
     <string name="advanceTicketCaption">ADVANCE TICKET INPUT FORM</string>
     <string name="hintId">e.g. 1111</string>
     <string name="hintPrice">e.g. 5.9</string>
@@ -19,6 +20,7 @@
     <string name="textViewDescription">Description:</string>
     <string name="textViewVersion">Version:</string>
     <string name="textViewAuthor">Author:</string>
+    <string name="textViewUUID">UUID:</string>
     <string name="textViewNameDescription">MovieTeather</string>
     <string name="textViewDescriptionDescription">Application is about Movie \nTheatre which contains \nlist of tickets</string>
     <string name="textViewVersionDescription">Task 4</string>
@@ -27,4 +29,11 @@
     <string name="toastNumbersError">Id, price or daysAhead contains only numbers!</string>
     <string name="toastDecimalNumbersError">Id and DaysAhead can not have decimal numbers!</string>
     <string name="toastInputError">Check inputs again!!!</string>
+    <string name="textViewThemeCaption">Choose Theme</string>
+    <string name="buttonLightTheme">Light theme</string>
+    <string name="buttonDarkTheme">Dark theme</string>
+    <string name="textViewLanguageCaption">Choose Language</string>
+    <string name="buttonLanguageEn">En</string>
+    <string name="buttonLanguageDe">De</string>
+    <string name="buttonLanguageSl">Sl</string>
 </resources>

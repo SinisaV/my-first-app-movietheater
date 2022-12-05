@@ -5,7 +5,7 @@
     <dimen name="marginStartImageMain">8dp</dimen>
     <dimen name="marginTopImageMain">8dp</dimen>
     <dimen name="marginTopButtonMain">8dp</dimen>
-    <dimen name="marginEndButtonMain">32dp</dimen>
+    <dimen name="marginEndButtonMain">14dp</dimen>
     <dimen name="marginTopTextViewMain">64dp</dimen>
     <dimen name="fontSizeMain">20sp</dimen>
     <dimen name="widthAndHeightImageMIconMain">100dp</dimen>

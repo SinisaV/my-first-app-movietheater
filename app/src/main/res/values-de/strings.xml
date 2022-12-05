@@ -5,6 +5,7 @@
     <string name="list">aufführen</string>
     <string name="buttonInput">Eingang</string>
     <string name="buttonAbout">Um</string>
+    <string name="buttonSettings">Einstellungen</string>
     <string name="advanceTicketCaption">TICKET-EINGABEFORMULAR IM VORAUS</string>
     <string name="hintId">z.B. 1111</string>
     <string name="hintPrice">z.B. 5.9</string>
@@ -20,6 +21,7 @@
     <string name="textViewDescription">Beschreibung:</string>
     <string name="textViewVersion">Ausführung:</string>
     <string name="textViewAuthor">Autor:</string>
+    <string name="textViewUUID">UUID:</string>
     <string name="textViewNameDescription">MovieTeather</string>
     <string name="textViewDescriptionDescription">Die Anwendung bezieht \nsich auf das Kino, das \neine Liste der \nEintrittskarten enthält</string>
     <string name="textViewVersionDescription">Aufgabe 4</string>
@@ -28,4 +30,11 @@
     <string name="toastNumbersError">Id, Preis oder TageImVoraus enthalten nur Zahlen!</string>
     <string name="toastDecimalNumbersError">Id und TageImVoraus dürfen keine Dezimalzahlen haben!</string>
     <string name="toastInputError">Eingaben nochmals prüfen!!!</string>
+    <string name="textViewThemeCaption">Wähle das Thema</string>
+    <string name="buttonLightTheme">Lichtthema</string>
+    <string name="buttonDarkTheme">Dunkles Thema</string>
+    <string name="textViewLanguageCaption">Sprache wählen</string>
+    <string name="buttonLanguageEn">En</string>
+    <string name="buttonLanguageDe">De</string>
+    <string name="buttonLanguageSl">Sl</string>
 </resources>

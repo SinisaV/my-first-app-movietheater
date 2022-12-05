@@ -7,6 +7,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/buttonSettings"
+        style="@style/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginEndButtonMain"
+        android:layout_marginTop="@dimen/marginTopButtonMain"
+        android:text="@string/buttonSettings"
+        android:textSize="@dimen/fontSizeButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
         android:id="@+id/buttonInputDataActivity"
         style="@style/myButton"
         android:layout_width="wrap_content"
@@ -15,8 +27,7 @@
         android:text="@string/buttonInput"
         android:textSize="@dimen/fontSizeButtons"
         app:layout_constraintEnd_toStartOf="@+id/buttonAboutActivity"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonSettings"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
@@ -47,9 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopTextViewMain"
+        android:fontFamily="@font/rubikbold"
         android:text="@string/listOfAdvanceTicketsCaption"
         android:textSize="@dimen/fontSizeMain"
-        android:fontFamily="@font/rubikbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />

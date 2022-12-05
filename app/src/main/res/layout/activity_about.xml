@@ -15,7 +15,7 @@
         android:text="@string/aboutApplicationCaption"
         android:textSize="@dimen/fontSizeCaptionAbout"
         android:fontFamily="@font/rubikbold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInfo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -68,6 +68,18 @@
         android:fontFamily="@font/rubikbold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewAuthor"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
+
+    <TextView
+        android:id="@+id/textViewIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewDesAbout"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/textViewUUID"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAuthorLabel" />
 
     <TextView
         android:id="@+id/textViewName"
@@ -123,7 +135,7 @@
         tools:layout_editor_absoluteY="438dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewInfo"
         android:layout_width="@dimen/widthAndHeightImageInfoAbout"
         android:layout_height="@dimen/widthAndHeightImageInfoAbout"
         android:layout_marginStart="@dimen/marginStartTextViewAbout"
@@ -133,7 +145,7 @@
         app:srcCompat="@drawable/information" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewMovieTape"
         android:layout_width="@dimen/widthImageVTAbout"
         android:layout_height="@dimen/heightImageVTAbout"
         android:layout_marginTop="@dimen/marginTopTextViewAbout"
@@ -141,5 +153,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAboutCaption"
         app:srcCompat="@drawable/videotape" />
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartTextViewAbout"
+        android:layout_marginTop="@dimen/marginTopTextViewDesAbout"
+        android:text="@string/textViewUUID"
+        android:textSize="@dimen/fontSizeTextViewAbout"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIdLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

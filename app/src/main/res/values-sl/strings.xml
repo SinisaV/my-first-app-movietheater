@@ -5,6 +5,7 @@
     <string name="list">seznam</string>
     <string name="buttonInput">Vnos</string>
     <string name="buttonAbout">O aplikaciji</string>
+    <string name="buttonSettings">Nastavitve</string>
     <string name="advanceTicketCaption">OBRAZEC ZA VNOS VSTOPNIC V PREDPRODAJI</string>
     <string name="hintId">npr. 1111</string>
     <string name="hintPrice">npr. 5.9</string>
@@ -20,6 +21,7 @@
     <string name="textViewDescription">Opis:</string>
     <string name="textViewVersion">Verzija:</string>
     <string name="textViewAuthor">Avtor:</string>
+    <string name="textViewUUID">UUID:</string>
     <string name="textViewNameDescription">MovieTeather</string>
     <string name="textViewDescriptionDescription">Aplikacija je o kinu, ki vsebuje \nseznam vstopnic</string>
     <string name="textViewVersionDescription">Naloga 4</string>
@@ -28,4 +30,11 @@
     <string name="toastNumbersError">Id, cena ali dneviVnaprej vsebuje samo številke!</string>
     <string name="toastDecimalNumbersError">Id in dneviVnaprej ne smeta imeti decimalnih števil!</string>
     <string name="toastInputError">Še enkrat preveri vnose!!!</string>
+    <string name="textViewThemeCaption">Izberi temo</string>
+    <string name="buttonLightTheme">Svetla tema</string>
+    <string name="buttonDarkTheme">Temna tema</string>
+    <string name="textViewLanguageCaption">Izberi jezik</string>
+    <string name="buttonLanguageEn">An</string>
+    <string name="buttonLanguageDe">Nm</string>
+    <string name="buttonLanguageSl">Sl</string>
 </resources>

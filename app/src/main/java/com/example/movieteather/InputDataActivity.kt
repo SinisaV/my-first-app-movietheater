@@ -12,10 +12,15 @@ import io.github.g00fy2.quickie.ScanQRCode
 class InputDataActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInputDataBinding
-    var listOfAdvanceTickets = mutableListOf<AdvanceTicket>()
+    //var listOfAdvanceTickets = mutableListOf<AdvanceTicket>()
+
+    lateinit var app: MyApplication
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        app = application as MyApplication
+
         binding = ActivityInputDataBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -64,7 +69,7 @@ class InputDataActivity : AppCompatActivity() {
                 val price: Double = binding.editTextTicketPrice.text.toString().toDouble()
                 val daysAhead: Int = binding.editTextTicketDaysAhead.text.toString().toInt()
 
-                listOfAdvanceTickets.add(AdvanceTicket(id, price, daysAhead))
+                app.data.add(AdvanceTicket(id, price, daysAhead))
 
                 binding.editTextTicketId.text.clear()
                 binding.editTextTicketPrice.text.clear()
