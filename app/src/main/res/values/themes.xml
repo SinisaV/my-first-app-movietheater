@@ -23,4 +23,10 @@
         <item name="android:fontFamily">@font/rubik</item>
     </style>
 
+    <style name="myRoundCorner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
 </resources>

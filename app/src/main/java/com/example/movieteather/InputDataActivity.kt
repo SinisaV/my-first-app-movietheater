@@ -1,5 +1,6 @@
 package com.example.movieteather
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -56,32 +57,54 @@ class InputDataActivity : AppCompatActivity() {
 
         binding.buttonAddTicket.setOnClickListener() {
 
-            if (binding.editTextTicketId.text.isBlank() || binding.editTextTicketPrice.text.isBlank()
-                || binding.editTextTicketDaysAhead.text.isBlank()) {
+            if (app.number == 1) {
+                if (binding.editTextTicketId.text.isBlank() || binding.editTextTicketPrice.text.isBlank()
+                    || binding.editTextTicketDaysAhead.text.isBlank()) {
 
-                val inputError: String = getString(R.string.toastInputError)
-                val myToast = Toast.makeText(applicationContext, inputError, Toast.LENGTH_SHORT)
-                myToast.setGravity(Gravity.CENTER, 0, 0)
-                myToast.show()
+                    val inputError: String = getString(R.string.toastInputError)
+                    val myToast = Toast.makeText(applicationContext, inputError, Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.CENTER, 0, 0)
+                    myToast.show()
+                }
+                else {
+                    val id: Int = binding.editTextTicketId.text.toString().toInt()
+                    val price: Double = binding.editTextTicketPrice.text.toString().toDouble()
+                    val daysAhead: Int = binding.editTextTicketDaysAhead.text.toString().toInt()
+
+                    app.data.add(AdvanceTicket(id, price, daysAhead))
+
+                    binding.editTextTicketId.text.clear()
+                    binding.editTextTicketPrice.text.clear()
+                    binding.editTextTicketDaysAhead.text.clear()
+
+                    val data = Intent()
+
+                    data.putExtra("id", id)
+                    data.putExtra("price",price)
+                    data.putExtra("daysAhead", daysAhead)
+
+                    setResult(RESULT_OK, data)
+                    finish()
+                }
             }
-            else {
+            else if (app.number == 2) {
+                binding.editTextTicketId.setText(app.data[app.position].id)
+                binding.editTextTicketPrice.setText(app.data[app.position].price.toString())
+                binding.editTextTicketDaysAhead.setText(app.data[app.position].daysAhead)
+
+
                 val id: Int = binding.editTextTicketId.text.toString().toInt()
                 val price: Double = binding.editTextTicketPrice.text.toString().toDouble()
                 val daysAhead: Int = binding.editTextTicketDaysAhead.text.toString().toInt()
 
-                app.data.add(AdvanceTicket(id, price, daysAhead))
+                app.data[app.position].id = id
+                app.data[app.position].price = price
+                app.data[app.position].daysAhead = daysAhead
 
                 binding.editTextTicketId.text.clear()
                 binding.editTextTicketPrice.text.clear()
                 binding.editTextTicketDaysAhead.text.clear()
 
-                val data = Intent()
-
-                data.putExtra("id", id)
-                data.putExtra("price",price)
-                data.putExtra("daysAhead", daysAhead)
-
-                setResult(RESULT_OK, data)
                 finish()
             }
         }

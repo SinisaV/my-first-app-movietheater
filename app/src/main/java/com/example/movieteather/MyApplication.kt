@@ -19,6 +19,8 @@ class MyApplication : Application() {
     lateinit var id:String
     private lateinit var gson: Gson
     private lateinit var file: File
+    var number = 0
+    var position = 0
 
     override fun onCreate() {
         super.onCreate()
